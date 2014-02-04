@@ -12,8 +12,8 @@ pathes=/etc/profile.d
 if [ ! -e ./openJDK.sh ]; then
     touch ./openJDK.sh
     echo "export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk.x86_64" >> ./openJDK.sh
-    echo "export CLASS_PATH=$JAVA_HOME/lib/tool.jar" >> ./openJDK.sh
-    echo "export PATH=$JAVA_HOME/bin:$PATH" >> ./openJDK.sh
+    echo "export CLASS_PATH=\$""JAVA_HOME""/lib/tool.jar" >> ./openJDK.sh
+    echo "export PATH=\$""JAVA_HOME""/bin:\$""PATH""" >> ./openJDK.sh
 fi
 
 if [ ! -e ${pathes}/openJDK.sh ]; then
